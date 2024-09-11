@@ -18,9 +18,23 @@ namespace InternTracker.Controllers
         [HttpGet]
         public IActionResult GetAllInterns()
         {
-           var allInterns= dbContext.Interns.ToList();
-            return Ok(allInterns);
+            // Veritabanından tüm stajyerleri çekin
+            var allInterns = dbContext.Interns.ToList();
+
+            // Her bir Intern nesnesini InternListDTO nesnesine dönüştürün
+            var allInternsDTO = allInterns.Select(intern => new InternListDTO(intern)).ToList();
+
+            return Ok(allInternsDTO);
         }
+
+
+
+        /* [HttpGet] NORMAL GET METODU
+         public IActionResult GetAllInterns()
+         {
+            var allInterns= dbContext.Interns.ToList();
+             return Ok(allInterns);
+         }*/
 
         [HttpGet]
         [Route("{Id:guid}")]

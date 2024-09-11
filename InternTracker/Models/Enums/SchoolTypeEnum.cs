@@ -2,8 +2,8 @@
 {
     public enum SchoolTypeEnum
     {
-        Lise=0, 
-        Üniversite=1, 
-        Mezun=2
+        Lise = 0,
+        Üniversite = 1,
+        Mezun = 2
     }
 }

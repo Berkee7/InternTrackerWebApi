@@ -15,6 +15,6 @@ namespace InternTracker.Models.Entities
         public DateTime InternEndDate { get; set; } 
         public SchoolTypeEnum SchoolType { get; set; } 
         public string SchoolName { get; set; } 
-        public string AcademicMajor { get; set; } 
+        public string AcademicMajor { get; set; }
     }
 }
