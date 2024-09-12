@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b9mOa0MHnuccllCadXj+vLoY9jGBsuJOGjQkvjLkJ1AXr4YhdJwPhAVCMEAlU2xxVafjr835+wKaHFoNrLAXtg==",
+  "dgSpecHash": "5iGvPAHmXots52+axMf8Cef6iZB3ZwEkr6PCCc14RUHcbJCabJ5Cu+mHZupMy69qQKR6LYNBzA9RUEkE8Nc8rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\InternTracker.csproj",
+  "projectFilePath": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cakcay\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\cakcay\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\InternTracker.csproj": {}
+    "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\InternTracker.csproj": {
+    "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\InternTracker.csproj",
+        "projectUniqueName": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
         "projectName": "InternTracker",
-        "projectPath": "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\InternTracker.csproj",
+        "projectPath": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
         "packagesPath": "C:\\Users\\cakcay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cakcay\\Desktop\\InternTracker\\InternTracker\\obj\\",
+        "outputPath": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages"
