@@ -3,6 +3,7 @@ using InternTracker.Models.DTO;
 using InternTracker.Models.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace InternTracker.Controllers
 {
@@ -49,7 +50,7 @@ namespace InternTracker.Controllers
             return Ok(Intern);
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public IActionResult AddIntern(InternDTO ınternDTO)
         {
             var InternEntity = new Intern()
@@ -68,7 +69,7 @@ namespace InternTracker.Controllers
             dbContext.Interns.Add(InternEntity);
             dbContext.SaveChanges();
             return Ok(InternEntity);
-        }
+        }*/
 
         [HttpPut]
         [Route("{Id:guid}")]
@@ -107,5 +108,34 @@ namespace InternTracker.Controllers
             return Ok(Intern);
         
         }
+        [HttpPost]
+        public IActionResult AddIntern2([FromBody] InternDTO internDTO)
+        {
+            if (internDTO == null)
+            {
+                return BadRequest("Intern data is null.");
+            }
+
+            var intern = new Intern
+            {
+                FirstName = internDTO.FirstName,
+                LastName = internDTO.LastName,
+                Email = internDTO.Email,
+                Phone = internDTO.Phone,
+                BirthDate = internDTO.BirthDate,
+                InternStartDate = internDTO.InternStartDate,
+                InternEndDate = internDTO.InternEndDate,
+                SchoolType = internDTO.SchoolTypeStr,
+                SchoolName = internDTO.SchoolName,
+                AcademicMajor = internDTO.AcademicMajor
+            };
+
+            dbContext.Interns.Add(intern);
+            dbContext.SaveChanges();
+
+            return Ok(intern);
+        }
+
+
     }
 }

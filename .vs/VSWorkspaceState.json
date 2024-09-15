@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\InternTracker",
-    "\\InternTracker\\Controllers"
+    "\\InternTracker\\Controllers",
+    "\\InternTracker\\Models",
+    "\\InternTracker\\Models\\DTO"
   ],
-  "SelectedNode": "\\InternTracker\\Controllers\\InternsController.cs",
+  "SelectedNode": "\\InternTracker\\Models\\DTO\\InternDTO.cs",
   "PreviewInSolutionExplorer": false
 }

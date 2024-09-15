@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Tracker</title>
+</head>
+<body>
+    <h1>Intern Registration Form</h1>
+    <form id="internForm">
+        <!-- Form Alanları -->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="FirstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="LastName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="Phone" required><br><br>
+
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="BirthDate" required><br><br>
+
+        <label for="internStartDate">Intern Start Date:</label>
+        <input type="date" id="internStartDate" name="InternStartDate" required><br><br>
+
+        <label for="internEndDate">Intern End Date:</label>
+        <input type="date" id="internEndDate" name="InternEndDate" required><br><br>
+
+        <label for="schoolType">School Type:</label>
+        <select id="schoolType" name="SchoolTypeStr" required>
+            <option value="0">Lise</option>
+            <option value="1">Üniversite</option>
+            <option value="2">Mezun</option>
+        </select><br><br>
+
+        <label for="schoolName">School Name:</label>
+        <input type="text" id="schoolName" name="SchoolName" required><br><br>
+
+        <label for="academicMajor">Academic Major:</label>
+        <input type="text" id="academicMajor" name="AcademicMajor" required><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        async function submitForm() {
+            const formData = {
+                FirstName: document.getElementById('firstName').value,
+                LastName: document.getElementById('lastName').value,
+                Email: document.getElementById('email').value,
+                Phone: document.getElementById('phone').value,
+                BirthDate: document.getElementById('birthDate').value,
+                InternStartDate: document.getElementById('internStartDate').value,
+                InternEndDate: document.getElementById('internEndDate').value,
+                SchoolTypeStr: parseInt(document.getElementById('schoolType').value), // Enum değerini integer olarak gönder
+                SchoolName: document.getElementById('schoolName').value,
+                AcademicMajor: document.getElementById('academicMajor').value
+            };
+
+            try {
+                const response = await fetch('/api/interns', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Intern added successfully!');
+                } else {
+                    const errorText = await response.text();
+                    alert('Failed to add intern: ' + errorText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error occurred while adding intern.');
+            }
+        }
+    </script>
+</body>
+</html>
