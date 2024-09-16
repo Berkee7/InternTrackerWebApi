@@ -4,8 +4,9 @@
     "\\InternTracker",
     "\\InternTracker\\Controllers",
     "\\InternTracker\\Models",
-    "\\InternTracker\\Models\\DTO"
+    "\\InternTracker\\Models\\DTO",
+    "\\InternTracker\\wwwroot"
   ],
-  "SelectedNode": "\\InternTracker\\Models\\DTO\\InternDTO.cs",
+  "SelectedNode": "\\InternTracker\\Controllers\\InternsController.cs",
   "PreviewInSolutionExplorer": false
 }

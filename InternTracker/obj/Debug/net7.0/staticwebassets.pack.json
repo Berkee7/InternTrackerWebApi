@@ -1,8 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.InternTracker.Microsoft.AspNetCore.StaticWebAssets.props",

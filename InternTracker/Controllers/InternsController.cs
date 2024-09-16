@@ -71,6 +71,49 @@ namespace InternTracker.Controllers
             return Ok(InternEntity);
         }*/
 
+        [HttpPost]
+        public IActionResult AddIntern2([FromBody] InternDTO internDTO)
+        {
+            if (internDTO == null)
+            {
+                return BadRequest("Intern data is null.");
+            }
+
+            // Yeni stajyerin başlangıç ve bitiş tarihlerini al
+            DateTime newInternStartDate = internDTO.InternStartDate;
+            DateTime newInternEndDate = internDTO.InternEndDate;
+
+            // Çakışan stajyerleri kontrol et
+            var conflictingInterns = dbContext.Interns
+                .Where(i => (i.InternStartDate < newInternEndDate && i.InternEndDate > newInternStartDate))
+                .ToList();
+
+            if (conflictingInterns.Any())
+            {
+                return Conflict("Staj Dönemleri çakışıyor. Lütfen başka aralıklar seçiniz!");
+            }
+
+            var intern = new Intern
+            {
+                FirstName = internDTO.FirstName,
+                LastName = internDTO.LastName,
+                Email = internDTO.Email,
+                Phone = internDTO.Phone,
+                BirthDate = internDTO.BirthDate,
+                InternStartDate = internDTO.InternStartDate,
+                InternEndDate = internDTO.InternEndDate,
+                SchoolType = internDTO.SchoolTypeStr,
+                SchoolName = internDTO.SchoolName,
+                AcademicMajor = internDTO.AcademicMajor
+            };
+
+            dbContext.Interns.Add(intern);
+            dbContext.SaveChanges();
+
+            return Ok(intern);
+        }
+
+
         [HttpPut]
         [Route("{Id:guid}")]
         public IActionResult UpdateInterns(Guid Id,UpdateInternDTO updateInternDTO)
@@ -108,34 +151,5 @@ namespace InternTracker.Controllers
             return Ok(Intern);
         
         }
-        [HttpPost]
-        public IActionResult AddIntern2([FromBody] InternDTO internDTO)
-        {
-            if (internDTO == null)
-            {
-                return BadRequest("Intern data is null.");
-            }
-
-            var intern = new Intern
-            {
-                FirstName = internDTO.FirstName,
-                LastName = internDTO.LastName,
-                Email = internDTO.Email,
-                Phone = internDTO.Phone,
-                BirthDate = internDTO.BirthDate,
-                InternStartDate = internDTO.InternStartDate,
-                InternEndDate = internDTO.InternEndDate,
-                SchoolType = internDTO.SchoolTypeStr,
-                SchoolName = internDTO.SchoolName,
-                AcademicMajor = internDTO.AcademicMajor
-            };
-
-            dbContext.Interns.Add(intern);
-            dbContext.SaveChanges();
-
-            return Ok(intern);
-        }
-
-
     }
 }

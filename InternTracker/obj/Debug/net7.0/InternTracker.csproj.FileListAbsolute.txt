@@ -228,3 +228,4 @@ C:\Users\berke\Desktop\InternTrackerWebApi\InternTracker\obj\Debug\net7.0\Intern
 C:\Users\berke\Desktop\InternTrackerWebApi\InternTracker\obj\Debug\net7.0\InternTracker.genruntimeconfig.cache
 C:\Users\berke\Desktop\InternTrackerWebApi\InternTracker\obj\Debug\net7.0\ref\InternTracker.dll
 C:\Users\berke\Desktop\InternTrackerWebApi\InternTracker\bin\Debug\net7.0\InternTracker.staticwebassets.runtime.json
+C:\Users\cakcay\Desktop\InternTrackerWebApi\InternTracker\bin\Debug\net7.0\InternTracker.staticwebassets.runtime.json

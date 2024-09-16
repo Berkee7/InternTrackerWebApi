@@ -4,47 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intern Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Intern Registration Form</h1>
-    <form id="internForm">
-        <!-- Form Alanları -->
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="FirstName" required><br><br>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="LastName" required><br><br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand">Intern Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Insert</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#deleteSection">Delete</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#updateSection">Update</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="Email" required><br><br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="Phone" required><br><br>
-
-        <label for="birthDate">Birth Date:</label>
-        <input type="date" id="birthDate" name="BirthDate" required><br><br>
-
-        <label for="internStartDate">Intern Start Date:</label>
-        <input type="date" id="internStartDate" name="InternStartDate" required><br><br>
-
-        <label for="internEndDate">Intern End Date:</label>
-        <input type="date" id="internEndDate" name="InternEndDate" required><br><br>
-
-        <label for="schoolType">School Type:</label>
-        <select id="schoolType" name="SchoolTypeStr" required>
-            <option value="0">Lise</option>
-            <option value="1">Üniversite</option>
-            <option value="2">Mezun</option>
-        </select><br><br>
-
-        <label for="schoolName">School Name:</label>
-        <input type="text" id="schoolName" name="SchoolName" required><br><br>
-
-        <label for="academicMajor">Academic Major:</label>
-        <input type="text" id="academicMajor" name="AcademicMajor" required><br><br>
-
-        <button type="button" onclick="submitForm()">Submit</button>
-    </form>
+    <div class="container" style="max-width: 600px;">
+        <h2 class="mb-4 text-center">Intern Information Form</h2>
+        <form id="internForm">
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="FirstName" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="LastName" class="form-control" required>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="Phone" class="form-control" required>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="birthDate">Birth Date:</label>
+                    <input type="date" id="birthDate" name="BirthDate" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="internStartDate">Intern Start Date:</label>
+                    <input type="date" id="internStartDate" name="InternStartDate" class="form-control" required>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="internEndDate">Intern End Date:</label>
+                    <input type="date" id="internEndDate" name="InternEndDate" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="schoolType">School Type:</label>
+                    <select id="schoolType" name="SchoolTypeStr" class="form-control" required>
+                        <option value="0">High school</option>
+                        <option value="1">University</option>
+                        <option value="2">Graduate</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 form-group">
+                    <label for="schoolName">School Name:</label>
+                    <input type="text" id="schoolName" name="SchoolName" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="academicMajor">Academic Major:</label>
+                    <input type="text" id="academicMajor" name="AcademicMajor" class="form-control" required>
+                </div>
+            </div>
+            <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
     <script>
         async function submitForm() {
@@ -56,7 +105,7 @@
                 BirthDate: document.getElementById('birthDate').value,
                 InternStartDate: document.getElementById('internStartDate').value,
                 InternEndDate: document.getElementById('internEndDate').value,
-                SchoolTypeStr: parseInt(document.getElementById('schoolType').value), // Enum değerini integer olarak gönder
+                SchoolTypeStr: parseInt(document.getElementById('schoolType').value),
                 SchoolName: document.getElementById('schoolName').value,
                 AcademicMajor: document.getElementById('academicMajor').value
             };
@@ -71,14 +120,14 @@
                 });
 
                 if (response.ok) {
-                    alert('Intern added successfully!');
+                    alert('Başarılı bir şekilde eklendi!');
                 } else {
                     const errorText = await response.text();
-                    alert('Failed to add intern: ' + errorText);
+                    alert('Eklerken hata oluştu! ' + errorText);
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Error occurred while adding intern.');
+                alert('Stajyer eklenirken hata oluştu.');
             }
         }
     </script>
