@@ -13,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 
@@ -43,19 +42,20 @@
     <div class="container" style="max-width: 600px;">
         <h2 class="mb-4 text-center">Intern Information Form</h2>
         <form id="internForm">
+            <!-- Personal Information -->
+            <i><h4 class="mb-3">Personal Information</h4></i>
+            <hr />
             <div class="row">
-                
                 <div class="col-md-6 form-group">
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="FirstName" class="form-control" required>
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="lastName">Last Name:</label>
-                    <input  type="text" id="lastName" name="LastName" class="form-control" required>
+                    <input type="text" id="lastName" name="LastName" class="form-control" required>
                 </div>
             </div>
             <div class="row">
-                
                 <div class="col-md-6 form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="Email" class="form-control" required>
@@ -66,42 +66,50 @@
                 </div>
             </div>
             <div class="row">
-                
                 <div class="col-md-6 form-group">
                     <label for="birthDate">Birth Date:</label>
-                    <input  type="date" id="birthDate" name="BirthDate" class="form-control" required>
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="internStartDate">Intern Start Date:</label>
-                    <input  type="date" id="internStartDate" name="InternStartDate" class="form-control" required>
+                    <input type="date" id="birthDate" name="BirthDate" class="form-control" required>
                 </div>
             </div>
+
+            <!-- Internship Information -->
+            <hr />
+            <i><h4 class="mb-3">Internship Information</h4></i>
             <div class="row">
-                
                 <div class="col-md-6 form-group">
-                    <label for="internEndDate">Intern End Date:</label>
-                    <input  type="date" id="internEndDate" name="InternEndDate" class="form-control" required>
+                    <label for="internStartDate">Intern Start Date:</label>
+                    <input type="date" id="internStartDate" name="InternStartDate" class="form-control" required>
                 </div>
                 <div class="col-md-6 form-group">
+                    <label for="internEndDate">Intern End Date:</label>
+                    <input type="date" id="internEndDate" name="InternEndDate" class="form-control" required>
+                </div>
+            </div>
+
+            <!-- School Information -->
+            <hr />
+           <i><h4 class="mb-3">School Information</h4></i> 
+            <div class="row">
+                <div class="col-md-6 form-group">
                     <label for="schoolType">School Type:</label>
-                    <select  id="schoolType" name="SchoolTypeStr" class="form-control">
+                    <select id="schoolType" name="SchoolTypeStr" class="form-control">
                         <option value="0">High school</option>
                         <option value="1">University</option>
                         <option value="2">Graduate</option>
                     </select>
                 </div>
-            </div>
-            <div class="row">
-                
                 <div class="col-md-6 form-group">
                     <label for="schoolName">School Name:</label>
-                    <input  type="text" id="schoolName" name="SchoolName" class="form-control" required>
+                    <input type="text" id="schoolName" name="SchoolName" class="form-control" required>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="academicMajor">Academic Major:</label>
                     <input type="text" id="academicMajor" name="AcademicMajor" class="form-control" required>
                 </div>
             </div>
+
             <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
         </form>
     </div>
@@ -138,7 +146,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Stajyer eklenirken hata oluştu.');W
+                alert('Stajyer eklenirken hata oluştu.');
             }
         }
     </script>

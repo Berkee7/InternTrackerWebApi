@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\models\\dto\\interndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\models\\dto\\interndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\models\\entities\\intern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\models\\entities\\intern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\controllers\\internscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +42,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InternDTO.cs",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\DTO\\InternDTO.cs",
-              "RelativeDocumentMoniker": "InternTracker\\Models\\DTO\\InternDTO.cs",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\DTO\\InternDTO.cs",
-              "RelativeToolTip": "InternTracker\\Models\\DTO\\InternDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Intern.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\Entities\\Intern.cs",
+              "RelativeDocumentMoniker": "InternTracker\\Models\\Entities\\Intern.cs",
+              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\Entities\\Intern.cs",
+              "RelativeToolTip": "InternTracker\\Models\\Entities\\Intern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T16:33:57.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T19:01:29.371Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "InternTracker\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "InternTracker\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T18:57:14.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InternsController.cs",
               "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Controllers\\InternsController.cs",
               "RelativeDocumentMoniker": "InternTracker\\Controllers\\InternsController.cs",
               "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Controllers\\InternsController.cs",
               "RelativeToolTip": "InternTracker\\Controllers\\InternsController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAgwHUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T16:14:20.153Z"
+              "WhenOpened": "2024-09-18T18:45:25.003Z"
             },
             {
               "$type": "Document",
@@ -69,9 +84,9 @@
               "RelativeDocumentMoniker": "InternTracker\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
               "RelativeToolTip": "InternTracker\\wwwroot\\index.html",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAswFsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-15T16:11:51.328Z",
+              "WhenOpened": "2024-09-18T18:44:50.793Z",
               "EditorCaption": ""
             }
           ]

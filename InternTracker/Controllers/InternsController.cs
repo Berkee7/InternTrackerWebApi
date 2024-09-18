@@ -28,7 +28,8 @@ namespace InternTracker.Controllers
             // Veritabanından tüm stajyerleri çekin
             var allInterns = dbContext.Interns.ToList();
 
-            // Her bir Intern nesnesini InternListDTO nesnesine dönüştürün
+            // Her bir Intern nesnesini InternListDTO nesnesine dönüştürdüm
+
             var allInternsDTO = allInterns.Select(intern => new InternListDTO(intern)).ToList();
 
             return Ok(allInternsDTO);
@@ -102,8 +103,9 @@ namespace InternTracker.Controllers
             }
 
             List<DateTime> internHolidayDates = await _holidayService.GetPublicHolidaysAsync();
-            newInternStartDate = SetAgain(newInternStartDate, internHolidayDates);
-            newInternEndDate = SetAgain(newInternEndDate, internHolidayDates);
+
+            newInternEndDate = SetAgain(newInternStartDate, newInternEndDate, internHolidayDates);
+            internDTO.InternEndDate = newInternEndDate;
 
             var intern = new Intern
             {
@@ -127,17 +129,29 @@ namespace InternTracker.Controllers
             return Ok(intern);
         }
 
-
-        public static DateTime SetAgain(DateTime date, List<DateTime> holidays)
+        public static DateTime SetAgain(DateTime startDate, DateTime endDate, List<DateTime> holidays)
         {
+            DateTime adjustedEndDate = endDate;
 
-            while (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday || holidays.Contains(date))
+            // Başlangıç tarihinden itibaren her günü kontrol et
+            DateTime currentDate = startDate.AddDays(1);
+
+            while (currentDate <= adjustedEndDate)
             {
-
-                date = date.AddDays(1);
+                // Eğer tarih hafta sonu ya da tatil gününe denk geliyorsa bitiş tarihini bir gün ileri taşı
+                if (currentDate.DayOfWeek == DayOfWeek.Saturday || currentDate.DayOfWeek == DayOfWeek.Sunday || holidays.Contains(currentDate.Date))
+                {
+                    // Bitiş tarihini ileri taşı
+                    adjustedEndDate = adjustedEndDate.AddDays(1);
+                }
+                // Bir sonraki günü kontrol et
+                currentDate = currentDate.AddDays(1);
             }
-            return date;
+
+            return adjustedEndDate;
         }
+
+
 
 
         [HttpPut]
