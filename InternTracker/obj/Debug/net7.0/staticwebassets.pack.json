@@ -17,6 +17,22 @@
       "PackagePath": "staticwebassets\\images\\4.jpg"
     },
     {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\ogr.png",
+      "PackagePath": "staticwebassets\\images\\ogr.png"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\ogr2.png",
+      "PackagePath": "staticwebassets\\images\\ogr2.png"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\ogr3.png",
+      "PackagePath": "staticwebassets\\images\\ogr3.png"
+    },
+    {
+      "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\images\\ogr4.png",
+      "PackagePath": "staticwebassets\\images\\ogr4.png"
+    },
+    {
       "Id": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

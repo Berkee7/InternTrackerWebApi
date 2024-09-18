@@ -1,9 +1,12 @@
 ﻿using InternTracker.Data;
 using InternTracker.Models.DTO;
 using InternTracker.Models.Entities;
+using InternTracker.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Tokens;
 
 namespace InternTracker.Controllers
 {
@@ -12,9 +15,12 @@ namespace InternTracker.Controllers
     public class InternsController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
+        private readonly HolidayService _holidayService;
 
-        public InternsController(ApplicationDbContext dbContext) {
+        public InternsController(ApplicationDbContext dbContext, HolidayService holidayService )
+        {
             this.dbContext = dbContext;
+            _holidayService = holidayService;
         }
         [HttpGet]
         public IActionResult GetAllInterns()
@@ -72,26 +78,32 @@ namespace InternTracker.Controllers
         }*/
 
         [HttpPost]
-        public IActionResult AddIntern2([FromBody] InternDTO internDTO)
+        public async Task<IActionResult> AddIntern2([FromBody] InternDTO internDTO)
         {
             if (internDTO == null)
             {
                 return BadRequest("Intern data is null.");
             }
 
+
             // Yeni stajyerin başlangıç ve bitiş tarihlerini al
             DateTime newInternStartDate = internDTO.InternStartDate;
             DateTime newInternEndDate = internDTO.InternEndDate;
+            
 
             // Çakışan stajyerleri kontrol et
-            var conflictingInterns = dbContext.Interns
-                .Where(i => (i.InternStartDate < newInternEndDate && i.InternEndDate > newInternStartDate))
-                .ToList();
+            var conflictingInterns = await dbContext.Interns
+                .Where(i=>i.InternEndDate>newInternStartDate)
+                .ToListAsync();
 
             if (conflictingInterns.Any())
             {
                 return Conflict("Staj Dönemleri çakışıyor. Lütfen başka aralıklar seçiniz!");
             }
+
+            List<DateTime> internHolidayDates = await _holidayService.GetPublicHolidaysAsync();
+            newInternStartDate = SetAgain(newInternStartDate, internHolidayDates);
+            newInternEndDate = SetAgain(newInternEndDate, internHolidayDates);
 
             var intern = new Intern
             {
@@ -107,10 +119,24 @@ namespace InternTracker.Controllers
                 AcademicMajor = internDTO.AcademicMajor
             };
 
+
+
             dbContext.Interns.Add(intern);
             dbContext.SaveChanges();
 
             return Ok(intern);
+        }
+
+
+        public static DateTime SetAgain(DateTime date, List<DateTime> holidays)
+        {
+
+            while (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday || holidays.Contains(date))
+            {
+
+                date = date.AddDays(1);
+            }
+            return date;
         }
 
 
