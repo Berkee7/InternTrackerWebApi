@@ -88,7 +88,7 @@
 
             <!-- School Information -->
             <hr />
-           <i><h4 class="mb-3">School Information</h4></i> 
+            <i><h4 class="mb-3">School Information</h4></i>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="schoolType">School Type:</label>
@@ -110,45 +110,9 @@
                 </div>
             </div>
 
-            <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" id="tikla">Submit</button>
         </form>
     </div>
-
-    <script>
-        async function submitForm() {
-            const formData = {
-                FirstName: document.getElementById('firstName').value,
-                LastName: document.getElementById('lastName').value,
-                Email: document.getElementById('email').value,
-                Phone: document.getElementById('phone').value,
-                BirthDate: document.getElementById('birthDate').value,
-                InternStartDate: document.getElementById('internStartDate').value,
-                InternEndDate: document.getElementById('internEndDate').value,
-                SchoolTypeStr: parseInt(document.getElementById('schoolType').value),
-                SchoolName: document.getElementById('schoolName').value,
-                AcademicMajor: document.getElementById('academicMajor').value
-            };
-
-            try {
-                const response = await fetch('/api/interns', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    alert('Başarılı bir şekilde eklendi!');
-                } else {
-                    const errorText = await response.text();
-                    alert('Eklerken hata oluştu! ' + errorText);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Stajyer eklenirken hata oluştu.');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

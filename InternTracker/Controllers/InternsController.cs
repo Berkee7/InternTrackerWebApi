@@ -132,22 +132,27 @@ namespace InternTracker.Controllers
         public static DateTime SetAgain(DateTime startDate, DateTime endDate, List<DateTime> holidays)
         {
             DateTime adjustedEndDate = endDate;
-
-            // Başlangıç tarihinden itibaren her günü kontrol et
+            var sayac = 0;
             DateTime currentDate = startDate.AddDays(1);
 
             while (currentDate <= adjustedEndDate)
             {
-                // Eğer tarih hafta sonu ya da tatil gününe denk geliyorsa bitiş tarihini bir gün ileri taşı
+                
                 if (currentDate.DayOfWeek == DayOfWeek.Saturday || currentDate.DayOfWeek == DayOfWeek.Sunday || holidays.Contains(currentDate.Date))
                 {
-                    // Bitiş tarihini ileri taşı
+                    
                     adjustedEndDate = adjustedEndDate.AddDays(1);
                 }
-                // Bir sonraki günü kontrol et
+                if (currentDate.DayOfWeek==DayOfWeek.Tuesday || currentDate.DayOfWeek==DayOfWeek.Friday)
+                {
+                    sayac++;
+
+                }
+                
                 currentDate = currentDate.AddDays(1);
             }
 
+            Console.WriteLine("HomeOffice Gün Sayısı: "+sayac);
             return adjustedEndDate;
         }
 
