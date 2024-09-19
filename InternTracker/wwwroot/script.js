@@ -8,34 +8,75 @@ document.addEventListener('DOMContentLoaded', function () {
             if (document.getElementById('firstName').value.trim() === "") {
                 document.getElementById('firstName').style.borderColor = "red";
                 return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('firstName').style.borderColor = "";
             }
 
             if (document.getElementById('lastName').value.trim() === "") {
                 document.getElementById('lastName').style.borderColor = "red";
                 return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('lastName').style.borderColor = "";
             }
+
             if (document.getElementById('email').value.trim() === "") {
                 document.getElementById('email').style.borderColor = "red";
                 return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('email').style.borderColor = "";
             }
 
             if (document.getElementById('phone').value.trim() === "") {
                 document.getElementById('phone').style.borderColor = "red";
                 return; // Fonksiyondan çýk
-            }
-            if (document.getElementById('birthDate').value.trim() === "gg.aa.yyyy") {
-                document.getElementById('birthDate').style.borderColor = "red";
-                return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('phone').style.borderColor = "";
             }
 
-            if (document.getElementById('internStartDate').value.trim() === "gg.aa.yyyy") {
+            if (document.getElementById('birthDate').value.trim() === "") {
+                document.getElementById('birthDate').style.borderColor = "red";
+                return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('birthDate').style.borderColor = "";
+            }
+
+            if (document.getElementById('internStartDate').value.trim() === "") {
                 document.getElementById('internStartDate').style.borderColor = "red";
                 return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('internStartDate').style.borderColor = "";
             }
-            if (document.getElementById('internEndDate').value.trim() === "gg.aa.yyyy") {
+            if (document.getElementById('internEndDate').value.trim() === "") {
                 document.getElementById('internEndDate').style.borderColor = "red";
                 return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('internEndDate').style.borderColor = "";
             }
+
+
+
+            if (document.getElementById('schoolName').value.trim() === "") {
+                document.getElementById('schoolName').style.borderColor = "red";
+                return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('schoolName').style.borderColor = "";
+            }
+            if (document.getElementById('academicMajor').value.trim() === "") {
+                document.getElementById('academicMajor').style.borderColor = "red";
+                return; // Fonksiyondan çýk
+            } else {
+
+                document.getElementById('academicMajor').style.borderColor = "";
+            }
+
 
             const formData = {
                 FirstName: document.getElementById('firstName').value,
