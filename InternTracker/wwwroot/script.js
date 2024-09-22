@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 if (response.ok) {
-                    alert('Baþarýlý bir þekilde eklendi!');
+                    alert('Eklenen Stajyer: ' + document.getElementById('firstName').value +' '+ document.getElementById('lastName').value);
 
                     // Form alanlarýný temizle
                     document.getElementById('firstName').value = "";
@@ -116,11 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 } else {
                     const errorText = await response.text(); // Asenkron olarak yanýtý al
-                    alert('Eklerken hata oluþtu! ' + errorText);
+                    alert('Eklerken hata olustu! ' + errorText);
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Stajyer eklenirken hata oluþtu.');
+                alert('Stajyer eklenirken hata olustu.');
             }
         });
     }

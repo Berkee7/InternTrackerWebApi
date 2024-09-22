@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\services\\internservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\services\\internservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\controllers\\internscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\controllers\\internscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\services\\holidayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\services\\holidayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\models\\enums\\schooltypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\models\\enums\\schooltypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\migrations\\20240919173724_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\migrations\\20240919173724_mig1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|c:\\users\\berke\\desktop\\interntrackerwebapi\\interntracker\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{86FCFDF8-601F-49B6-B114-1A0106C96ADA}|InternTracker\\InternTracker.csproj|solutionrelative:interntracker\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,89 +42,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "script.js",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\script.js",
-              "RelativeDocumentMoniker": "InternTracker\\wwwroot\\script.js",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\script.js",
-              "RelativeToolTip": "InternTracker\\wwwroot\\script.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-22T12:01:54.518Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "InternTracker\\wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
-              "RelativeToolTip": "InternTracker\\wwwroot\\index.html",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-22T11:27:24.708Z",
+              "Title": "InternService.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Services\\InternService.cs",
+              "RelativeDocumentMoniker": "InternTracker\\Services\\InternService.cs",
+              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Services\\InternService.cs",
+              "RelativeToolTip": "InternTracker\\Services\\InternService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:30:43.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\script.js",
+              "RelativeDocumentMoniker": "InternTracker\\wwwroot\\script.js",
+              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\script.js",
+              "RelativeToolTip": "InternTracker\\wwwroot\\script.js",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAYwHsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-22T21:13:13.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "InternTracker\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\index.html",
+              "RelativeToolTip": "InternTracker\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-22T21:10:12.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InternsController.cs",
               "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Controllers\\InternsController.cs",
               "RelativeDocumentMoniker": "InternTracker\\Controllers\\InternsController.cs",
               "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Controllers\\InternsController.cs",
               "RelativeToolTip": "InternTracker\\Controllers\\InternsController.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowGsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T11:26:04.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\style.css",
-              "RelativeDocumentMoniker": "InternTracker\\wwwroot\\style.css",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\wwwroot\\style.css",
-              "RelativeToolTip": "InternTracker\\wwwroot\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-22T10:57:42.091Z",
+              "WhenOpened": "2024-09-22T21:00:50.831Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HolidayService.cs",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Services\\HolidayService.cs",
-              "RelativeDocumentMoniker": "InternTracker\\Services\\HolidayService.cs",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Services\\HolidayService.cs",
-              "RelativeToolTip": "InternTracker\\Services\\HolidayService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T10:57:24.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SchoolTypeEnum.cs",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\Enums\\SchoolTypeEnum.cs",
-              "RelativeDocumentMoniker": "InternTracker\\Models\\Enums\\SchoolTypeEnum.cs",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Models\\Enums\\SchoolTypeEnum.cs",
-              "RelativeToolTip": "InternTracker\\Models\\Enums\\SchoolTypeEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T10:57:14.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240919173724_mig1.cs",
-              "DocumentMoniker": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Migrations\\20240919173724_mig1.cs",
-              "RelativeDocumentMoniker": "InternTracker\\Migrations\\20240919173724_mig1.cs",
-              "ToolTip": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\Migrations\\20240919173724_mig1.cs",
-              "RelativeToolTip": "InternTracker\\Migrations\\20240919173724_mig1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T10:57:07.294Z"
             }
           ]
         }

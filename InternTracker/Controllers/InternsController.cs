@@ -2,11 +2,12 @@
 using InternTracker.Models.DTO;
 using InternTracker.Models.Entities;
 using InternTracker.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace InternTracker.Controllers
 {
@@ -16,11 +17,13 @@ namespace InternTracker.Controllers
     {
         private readonly ApplicationDbContext dbContext;
         private readonly HolidayService _holidayService;
+        private readonly InternService _internService;
 
-        public InternsController(ApplicationDbContext dbContext, HolidayService holidayService )
+        public InternsController(ApplicationDbContext dbContext, HolidayService holidayService, InternService internService)
         {
             this.dbContext = dbContext;
             _holidayService = holidayService;
+            _internService = internService;
         }
         [HttpGet]
         public IActionResult GetAllInterns()
@@ -86,11 +89,9 @@ namespace InternTracker.Controllers
                 return BadRequest("Intern data is null.");
             }
 
-
             // Yeni stajyerin başlangıç ve bitiş tarihlerini al
             DateTime newInternStartDate = internDTO.InternStartDate;
             DateTime newInternEndDate = internDTO.InternEndDate;
-
 
             // Çakışan stajyerleri kontrol et
             var conflictingInterns = await dbContext.Interns.Where(i => !(newInternStartDate >= i.InternEndDate || newInternEndDate <= i.InternStartDate)).ToListAsync();
@@ -102,7 +103,8 @@ namespace InternTracker.Controllers
 
             List<DateTime> internHolidayDates = await _holidayService.GetPublicHolidaysAsync();
 
-            newInternEndDate = SetAgain(newInternStartDate, newInternEndDate, internHolidayDates);
+            // SetAgain fonksiyonu artık InternService üzerinden çağrılıyor
+            newInternEndDate = _internService.SetAgain(newInternStartDate, newInternEndDate, internHolidayDates);
             internDTO.InternEndDate = newInternEndDate;
 
             var intern = new Intern
@@ -119,42 +121,11 @@ namespace InternTracker.Controllers
                 AcademicMajor = internDTO.AcademicMajor
             };
 
-
-
             dbContext.Interns.Add(intern);
             dbContext.SaveChanges();
 
             return Ok(intern);
         }
-
-        public static DateTime SetAgain(DateTime startDate, DateTime endDate, List<DateTime> holidays)
-        {
-            DateTime adjustedEndDate = endDate;
-            var counter = 0;
-            DateTime currentDate = startDate.AddDays(1);
-
-            while (currentDate <= adjustedEndDate)
-            {
-                
-                if (currentDate.DayOfWeek == DayOfWeek.Saturday || currentDate.DayOfWeek == DayOfWeek.Sunday || holidays.Contains(currentDate.Date))
-                {
-                    
-                    adjustedEndDate = adjustedEndDate.AddDays(1);
-                }
-                if (currentDate.DayOfWeek==DayOfWeek.Tuesday || currentDate.DayOfWeek==DayOfWeek.Friday)
-                {
-                    counter++;
-
-                }
-                
-                currentDate = currentDate.AddDays(1);
-            }
-
-            Console.WriteLine("HomeOffice Gün Sayısı: "+ counter);
-            return adjustedEndDate;
-        }
-
-
 
 
         [HttpPut]
