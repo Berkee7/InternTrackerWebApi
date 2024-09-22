@@ -90,12 +90,10 @@ namespace InternTracker.Controllers
             // Yeni stajyerin başlangıç ve bitiş tarihlerini al
             DateTime newInternStartDate = internDTO.InternStartDate;
             DateTime newInternEndDate = internDTO.InternEndDate;
-            
+
 
             // Çakışan stajyerleri kontrol et
-            var conflictingInterns = await dbContext.Interns
-                .Where(i=>i.InternEndDate>newInternStartDate)
-                .ToListAsync();
+            var conflictingInterns = await dbContext.Interns.Where(i => !(newInternStartDate >= i.InternEndDate || newInternEndDate <= i.InternStartDate)).ToListAsync();
 
             if (conflictingInterns.Any())
             {
@@ -132,7 +130,7 @@ namespace InternTracker.Controllers
         public static DateTime SetAgain(DateTime startDate, DateTime endDate, List<DateTime> holidays)
         {
             DateTime adjustedEndDate = endDate;
-            var sayac = 0;
+            var counter = 0;
             DateTime currentDate = startDate.AddDays(1);
 
             while (currentDate <= adjustedEndDate)
@@ -145,14 +143,14 @@ namespace InternTracker.Controllers
                 }
                 if (currentDate.DayOfWeek==DayOfWeek.Tuesday || currentDate.DayOfWeek==DayOfWeek.Friday)
                 {
-                    sayac++;
+                    counter++;
 
                 }
                 
                 currentDate = currentDate.AddDays(1);
             }
 
-            Console.WriteLine("HomeOffice Gün Sayısı: "+sayac);
+            Console.WriteLine("HomeOffice Gün Sayısı: "+ counter);
             return adjustedEndDate;
         }
 
@@ -184,7 +182,6 @@ namespace InternTracker.Controllers
         [HttpDelete]
         [Route("{Id:guid}")]
         public IActionResult DeleteInterns(Guid Id) {
-        
             var Intern=dbContext.Interns.Find(Id);
             if(Intern is null)
             {
@@ -194,7 +191,6 @@ namespace InternTracker.Controllers
             dbContext.Interns.Remove(Intern);
             dbContext.SaveChanges();
             return Ok(Intern);
-        
         }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InternTracker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240919124146_mig1")]
+    [Migration("20240919173724_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
