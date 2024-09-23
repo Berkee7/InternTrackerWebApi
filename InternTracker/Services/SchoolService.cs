@@ -15,7 +15,7 @@ namespace InternTracker.Services
                 "Hacettepe Üniversitesi",
                 "Bülent Ecevit Üniversitesi",
                 "Orta Doğu Teknik Üniversitesi",
-                "Dokuz Eylüll Üniversitesi",
+                "Dokuz Eylül Üniversitesi",
                 "Celal Bayar Üniversitesi"
             };
         }

@@ -1,33 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {}
+    "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {
+    "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
+        "projectUniqueName": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
         "projectName": "InternTracker",
-        "projectPath": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
-        "packagesPath": "C:\\Users\\cakcay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cakcay\\Desktop\\InternTrackerWebApi\\InternTracker\\obj\\",
+        "projectPath": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\InternTracker.csproj",
+        "packagesPath": "C:\\Users\\berke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\berke\\Desktop\\InternTrackerWebApi\\InternTracker\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\cakcay\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Users\\berke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

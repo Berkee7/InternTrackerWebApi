@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InternTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97cae7ede664323669589673b4cd6a45eafcd3b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("InternTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InternTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

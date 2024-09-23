@@ -20,9 +20,9 @@
     ]
   },
   {
-    "ContainingType": "InternTracker.Controllers.InternsController",
+    "ContainingType": "InternTracker.Controllers.InternController",
     "Method": "GetAllInterns",
-    "RelativePath": "api/Interns",
+    "RelativePath": "api/Intern",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -30,9 +30,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InternTracker.Controllers.InternsController",
+    "ContainingType": "InternTracker.Controllers.InternController",
     "Method": "AddIntern2",
-    "RelativePath": "api/Interns",
+    "RelativePath": "api/Intern",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -46,9 +46,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InternTracker.Controllers.InternsController",
+    "ContainingType": "InternTracker.Controllers.InternController",
     "Method": "GetInternsById",
-    "RelativePath": "api/Interns/{Id}",
+    "RelativePath": "api/Intern/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -62,9 +62,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InternTracker.Controllers.InternsController",
+    "ContainingType": "InternTracker.Controllers.InternController",
     "Method": "UpdateInterns",
-    "RelativePath": "api/Interns/{Id}",
+    "RelativePath": "api/Intern/{Id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -83,9 +83,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InternTracker.Controllers.InternsController",
+    "ContainingType": "InternTracker.Controllers.InternController",
     "Method": "DeleteInterns",
-    "RelativePath": "api/Interns/{Id}",
+    "RelativePath": "api/Intern/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -96,6 +96,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolController",
+    "Method": "GetSchools",
+    "RelativePath": "api/school",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
