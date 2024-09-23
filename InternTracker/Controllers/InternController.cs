@@ -13,13 +13,13 @@ namespace InternTracker.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InternsController : ControllerBase
+    public class InternController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
         private readonly HolidayService _holidayService;
         private readonly InternService _internService;
 
-        public InternsController(ApplicationDbContext dbContext, HolidayService holidayService, InternService internService)
+        public InternController(ApplicationDbContext dbContext, HolidayService holidayService, InternService internService)
         {
             this.dbContext = dbContext;
             _holidayService = holidayService;
